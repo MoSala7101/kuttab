@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kuttab</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <!-- custom styles -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body>
+    <!---- Page wrapper --->
+    <div class="wrapper d-flex flex-column">
+        <!---- Navbar --->
+        <nav class="navbar navbar-expand-lg navbar-light" style="background: #fff;padding: 20px 50px">
+            <a class="navbar-brand" href="#"><img src="/assets//img/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto mr-4 mt-4 mt-lg-0">
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="#"><img class="mx-2" src="/assets/img/icons/add.png" alt=""> إضافة حلقة </a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="#"><img class="mx-2" src="/assets/img/icons/quill.png" alt="">مقالات ودروس
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item mx-3 active">
+                        <a class="btn btn-success-dark mt-3 mt-lg-0" href="home.html"> <img class="mx-1" src="/assets/img/icons/logout.png" alt=""> تسجيل دخول</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="btn btn-success-dark mt-3 mt-lg-0"> <img class="mx-1" src="/assets/img/icons/add-user.png" alt=""> حساب جديد </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!---- XX Navbar XX--->
+        <div class="d-flex flex-column h-100  justify-content-start" style="min-height: 100vh;">
+            <!---- Page Header --->
+            <div class="bg-success-dark  row justify-content-between text-center py-2 container-with-bg">
+                <span class="col-lg-4"></span>
+                <div class=" col-lg-4 d-flex flex-column justify-content-center align-items-center my-3">
+                    <p class="title font-weight-bold" style="font-size: 28px;font-family: GESSLight">حلقات تحفيظ القرآن مجانا</p>
+                    <p class="subtitle" style="font-family: GESSLight">تحفيظ /تجويد /دروس</p>
+                </div>
+                <div class=" col-lg-4 d-flex flex-column justify-content-center align-items-center my-3" style="font-family: GESSLight">
+                    <p class="subtitle-small">قال النبي صلى الله عليه وسلم</p>
+                    <p class="title">" خَيْرُكُمْ مَن تَعَلَّمَ القُرْآنَ وعَلَّمَهُ "</p>
+                    <p class="subtitle-small">صدق رسول الله صلى الله عليه وسلم</p>
+                </div>
+            </div>
+            <!---- XX Page Header XX--->
+            <!---------->
+            <!-- Main -->
+            <!---------->
+            <div class="container-fluid d-flex flex-column justify-content-start position-relative" style="min-height: 100vh;">
+                <!-- Filter -->
+                <div class="row mt-3 text-right mr-4">
+                    <label for="filter" class="label text-lg-center pt-2 col-sm-2" style="min-width: 100px">
+                        كل الحلقات <img class="mx-1" src="/assets/img/icons/filter.png" alt=""></label>
+                    <div class="col-lg-6">
+                        <input class="form-control" style="font-size: #ddd;" type="text" placeholder="ابحث عن اسم المحفظ او الحلقة" />
+                    </div>
+                </div>
+                <!-- XX Filter XX -->
+                <!-- Episodes cards -->
+                <div class="container-fluid mt-4">
+                    <div class=" row mt-3 d-flex flex-row flex-wrap justify-content-start align-items-center px-3">
+                        <div class="card text-right col-lg-3 shadow ml-auto my-2" style="max-width: 350px">
+                            <div class="card-body">
+                                <p class="card-title">الحلقة: السبت /الثلاثاء ... الساعة 3 عصرا</p>
+                                <p class="card-subtitle">الشيخ /علي عبد الجليل .. رجال</p>
+                                <div class=" d-flex flex-row justify-content-between align-items-center mt-3">
+                                    <p class="text-success episode-number">مستوى الحلقة (1)</p>
+                                    <button class="btn btn-success card-button">انضمام</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- XX Episodes cards XX -->
+                <!---------------->
+                <!-- XX Main XX -->
+                <!---------------->
+
+                <!------------>
+                <!-- Footer -->
+                <!------------>
+                <!---- Page Footer --->
+                <footer class="position-absolute row mx-0 text-white justify-content-between text-center py-2 w-100 container-with-bg" style="bottom: 0;left: 0;">
+                    <span class="col-lg-2"></span>
+                    <div class=" col-lg-7 d-flex flex-column justify-content-center align-items-center my-3">
+                        <p class="title " style="font-size: 14px;">حلقات تحفيظ القرآن مجانالكُتاب هو موقع إلكتروني خاص بتحفيظ القرآن الكريم على يد نخبة من الأساتذة الأفاضل</p>
+                        <p class="subtitle mt-2" style="font-family: GESSLight">جميع الحقوق محفوظة بتاريخ 2021</p>
+                    </div>
+                    <div class=" col-lg-3 d-flex flex-column justify-content-center align-items-center my-3">
+                        <p class="title" style="font-size:16px;">للاقتراحات و التواصل معنا اضغط هنا</p>
+                        <div class="d-flex flex-row justify-content-center align-items-center">
+                            <p class="subtitle-small mt-2" style="font-size: 14px;font-family: GESSLight">تابعنا هنا</p>
+                            <a href="#">
+                                <img style="width: 16px;" class="ml-1 mr-3 mt-1" src="/assets/img/icons/facebook.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img style="width: 16px;" class="mx-1 mt-1" src="/assets/img/icons/instagram.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+                <!---- XX Page Footer XX--->
+            </div>
+        </div>
+    </div>
+    <!------------------>
+    <!-- XX Footer XX -->
+    <!------------------>
+    <!-- jQuery -->
+    <script src="/assets/js/jquery-3.3.1.slim.min.js"></script>
+    <!-- Popper -->
+    <script src="/assets/js/popper.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="/assets/js/bootstrap.min.js"></script>
+</body>
+
+</html>

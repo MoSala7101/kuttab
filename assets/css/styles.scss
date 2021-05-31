@@ -1,0 +1,123 @@
+@font-face {
+    font-family: GESS;
+    src: url("/assets/fonts/ge_ss_two_medium.otf");
+}
+
+@font-face {
+    font-family: GESSLight;
+    src: url("/assets/fonts/ge_ss_two_light.otf");
+}
+
+@font-face {
+    font-family: GESSBold;
+    src: url("/assets/fonts/ge_ss_two_bold.otf");
+}
+
+html,
+body {
+    overflow-x: hidden;
+    font-family: GESS;
+    font-weight: normal;
+}
+
+.wrapper {
+    min-height: 100vh;
+}
+
+
+/* override bootstrap classes */
+
+.btn-success,
+.bg-success {
+    color: white !important;
+}
+
+.btn-success-dark {
+    background: #228068;
+    border: 1px solid #228068;
+    color: white !important;
+}
+
+.bg-success-dark {
+    background: #228068;
+    color: white !important;
+}
+
+.text-success {
+    color: #a38e63 !important;
+}
+
+
+/* XX override bootstrap classes XX */
+
+p,
+label {
+    margin-bottom: 0;
+}
+
+.container-with-bg {
+    min-height: 150px;
+    background: url(/assets/img/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.subtitle-small {
+    font-size: 10px;
+}
+
+.form-control::placeholder {
+    color: #bbb !important;
+}
+
+
+/* episodes card styles */
+
+.card {
+    border: 1px solid #bbb;
+    border-radius: 10px;
+}
+
+.card-title {
+    font-size: 14px;
+}
+
+.card-subtitle {
+    font-size: 14px;
+    color: #222;
+    font-family: GESSLight;
+}
+
+.episode-number {
+    font-size: 14px;
+}
+
+.card-button {
+    font-size: 14px;
+}
+
+
+/* XX episodes card styles XX */
+
+
+/* sidebar styles */
+
+.side-bar {
+    width: 250px;
+    height: 92vh;
+    background: #228068;
+    border-radius: 15px;
+    padding: 20px;
+    .seperator {
+        width: 90%;
+        height: 1px;
+        border-bottom: 1px solid #fff;
+        margin: 0 auto;
+    }
+}
+
+
+/* XX sidebar styles XX */
+
+
+/* XX override bootstrap classes XX */
