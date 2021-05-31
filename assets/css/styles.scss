@@ -102,12 +102,20 @@ label {
 
 /* sidebar styles */
 
-.side-bar {
+.sidebar {
     width: 250px;
-    height: 92vh;
+    min-width: 200px;
+    height: 86vh;
     background: #228068;
     border-radius: 15px;
     padding: 20px;
+    left: 30px;
+    &.hide-sidebar{
+        left: -100vw;
+    }
+    &.show-sidebar{
+        left: 30px;
+    }
     .seperator {
         width: 90%;
         height: 1px;
@@ -121,3 +129,4 @@ label {
 
 
 /* XX override bootstrap classes XX */
+

@@ -104,15 +104,25 @@ label {
 
 /* XX episodes card styles XX */
 /* sidebar styles */
-.side-bar {
+.sidebar {
   width: 250px;
-  height: 92vh;
+  min-width: 200px;
+  height: 86vh;
   background: #228068;
   border-radius: 15px;
   padding: 20px;
+  left: 30px;
 }
 
-.side-bar .seperator {
+.sidebar.hide-sidebar {
+  left: -100vw;
+}
+
+.sidebar.show-sidebar {
+  left: 30px;
+}
+
+.sidebar .seperator {
   width: 90%;
   height: 1px;
   border-bottom: 1px solid #fff;
@@ -121,3 +131,4 @@ label {
 
 /* XX sidebar styles XX */
 /* XX override bootstrap classes XX */
+/*# sourceMappingURL=styles.css.map */

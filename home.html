@@ -32,7 +32,7 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav mr-auto">
-                    <input class="form-control" style="font-size: #ddd;width:300px;" type="text" placeholder="ابحث عن اسم المحفظ او الحلقة" />
+                    <input class="form-control mr-auto" style="font-size: #ddd;width:300px;" type="text" placeholder="ابحث عن اسم المحفظ او الحلقة" />
                     <li class="nav-item mx-3 active">
                         <a class="btn btn-success-dark mt-3 mt-lg-0"> <img class="mx-1" src="/assets/img/icons/logout.png" alt=""> تسجيل دخول</a>
                     </li>
@@ -61,17 +61,20 @@
             <!---------->
             <!-- Main -->
             <!---------->
-            <div class="container-fluid d-flex flex-column justify-content-start position-relative" style="min-height: 100vh;">
+            <div class="container-fluid d-flex flex-column justify-content-start position-relative" style="min-height: 100vh;overflow:hidden">
                 <!-- Filter -->
                 <div class="row mt-3 text-right mr-4">
-                    <label for="filter" class="label text-lg-center pt-2 col-sm-2" style="min-width: 100px">
-                        كل الحلقات </label>
+                    <div class="d-flex flex-row justify-content-between w-100 position-relative">
+
+                        <label for="filter" class="label text-lg-center pt-2" style="min-width: 100px">
+                            كل الحلقات </label>
+                        </div>
                 </div>
                 <!-- XX Filter XX -->
                 <!-- Episodes cards -->
                 <div class="container-fluid row">
-                    <div class="d-flex flex-row col-lg-10 justify-content-start align-items-start">
-                        <div class=" row mt-3 d-flex flex-row flex-wrap justify-content-start align-items-center px-3 w-100">
+                    <div class="d-flex flex-row col-lg-10 col-12 justify-content-start align-items-start">
+                        <div class=" row mt-2 d-flex flex-row flex-wrap justify-content-start align-items-center px-3 w-100">
                             <div class="card text-right col-lg-4 shadow ml-auto my-2" style="max-width: 400px">
                                 <div class="card-body">
                                     <p class="card-title">الحلقة: السبت /الثلاثاء ... الساعة 3 عصرا</p>
@@ -104,18 +107,20 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-2 side-bar bg-success-dark">
-                        <div class="sidebar-content d-flex flex-column justify-content-center align-items-center">
+                    <div class="col-lg-2 sidebar bg-success-dark position-absolute d-none d-lg-block" id="sidebarMenu">
+                        <div  class="sidebar-content  d-flex flex-column justify-content-center align-items-center">
                             <img src="" class="bg-light mt-2" style="width: 80px;height: 80px;border-radius: 40px;" alt="Profile" />
                             <p class="txet-center mt-2">اسم المستخدم</p>
                             <span class="seperator mt-2" style="margin-bottom: 20px;"></span>
                             <p class="w-100 text-right">
-                                حلقات المعلم
+                                <img class="mx-1" src="/assets/img/icons/arrows.png" alt=""> 
+                                حلقات المعلم 
                             </p>
                             <p class="w-100 text-center" style="font-family: GESSLight;">
                                 لا توجد حلقات
                             </p>
                             <p class="w-100 text-right mt-4">
+                                <img class="mx-1" src="/assets/img/icons/arrows.png" alt="">
                                 حلقات المستخدم
                             </p>
                             <p class="w-100 text-center" style="font-family: GESSLight;">
@@ -137,6 +142,7 @@
     <script src="/assets/js/popper.min.js"></script>
     <!-- Bootstrap 4 -->
     <script src="/assets/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
