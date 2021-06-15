@@ -9,65 +9,229 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
     <!-- custom styles -->
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/styles.css" />
 </head>
-
 
 <body>
     <!---- Page wrapper --->
     <div class="wrapper d-flex flex-column">
         <!---- Navbar --->
-        <nav class="navbar navbar-expand-lg navbar-light" style="background: #fff;padding: 20px 50px">
-            <a class="navbar-brand" href="#"><img src="/assets//img/logo.png" alt=""></a>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background: #fff; padding: 20px 50px">
+            <a class="navbar-brand" href="#"><img src="/assets//img/logo.png" alt="" /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto mr-4 mt-4 mt-lg-0">
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="#"><img class="mx-2" src="/assets/img/icons/add.png" alt=""> إضافة حلقة </a>
+                        <a class="nav-link" href="#"><img class="mx-2" src="/assets/img/icons/add.png" alt="" /> إضافة حلقة
+                        </a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="#"><img class="mx-2" src="/assets/img/icons/quill.png" alt="">مقالات ودروس
+                        <a class="nav-link" href="#"><img class="mx-2" src="/assets/img/icons/quill.png" alt="" />مقالات ودروس
                         </a>
                     </li>
                 </ul>
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item mx-3 active">
-                        <a class="btn btn-success-dark mt-3 mt-lg-0" href="home.html"> <img class="mx-1" src="/assets/img/icons/logout.png" alt=""> تسجيل دخول</a>
+                        <a class="btn btn-success-dark mt-3 mt-lg-0" href="home.html" role="button" data-toggle="modal" data-target="#loginModal">
+                            <img class="mx-1" src="/assets/img/icons/logout.png" alt="" /> تسجيل دخول</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="btn btn-success-dark mt-3 mt-lg-0"> <img class="mx-1" src="/assets/img/icons/add-user.png" alt=""> حساب جديد </a>
+                        <a class="btn btn-success-dark mt-3 mt-lg-0" href="home.html" role="button" data-toggle="modal" data-target="#registerModal">
+                            <img class="mx-1" src="/assets/img/icons/add-user.png" alt="" /> حساب جديد
+                        </a>
                     </li>
                 </ul>
             </div>
         </nav>
         <!---- XX Navbar XX--->
-        <div class="d-flex flex-column h-100  justify-content-start" style="min-height: 100vh;">
+        <div class="d-flex flex-column h-100 justify-content-start" style="min-height: 100vh">
             <!---- Page Header --->
-            <div class="bg-success-dark  row justify-content-between text-center py-2 container-with-bg">
+            <div class=" bg-success-dark row justify-content-between text-center py-2 container-with-bg">
                 <span class="col-lg-4"></span>
                 <div class=" col-lg-4 d-flex flex-column justify-content-center align-items-center my-3">
-                    <p class="title font-weight-bold" style="font-size: 28px;font-family: GESSLight">حلقات تحفيظ القرآن مجانا</p>
-                    <p class="subtitle" style="font-family: GESSLight">تحفيظ /تجويد /دروس</p>
+                    <p class="title font-weight-bold" style="font-size: 28px; font-family: GESSLight">
+                        حلقات تحفيظ القرآن مجانا
+                    </p>
+                    <p class="subtitle" style="font-family: GESSLight">
+                        تحفيظ /تجويد /دروس
+                    </p>
                 </div>
                 <div class=" col-lg-4 d-flex flex-column justify-content-center align-items-center my-3" style="font-family: GESSLight">
                     <p class="subtitle-small">قال النبي صلى الله عليه وسلم</p>
-                    <p class="title">" خَيْرُكُمْ مَن تَعَلَّمَ القُرْآنَ وعَلَّمَهُ "</p>
+                    <p class="title">
+                        " خَيْرُكُمْ مَن تَعَلَّمَ القُرْآنَ وعَلَّمَهُ "
+                    </p>
                     <p class="subtitle-small">صدق رسول الله صلى الله عليه وسلم</p>
                 </div>
             </div>
+            <!-- Login Modal -->
+            <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered col-9" role="document" style="max-width: 70vw">
+                    <div class="modal-content">
+                        <div class="modal-header" style="border-bottom: none !important; padding: 8px 0">
+                            <h5 class="modal-title" id="loginModalTitle"></h5>
+                            <button type="button" class="close ml-0 mr-auto" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body row pt-0">
+                            <div class="col-8">
+                                <p class="title text-center">تسجيل الدخول</p>
+                                <div class="d-flex flex-column mt-4">
+                                    <div class="d-flex align-items-start flex-column">
+                                        <label class="control-label mb-1 text-danger" for="username">اسم
+                                            المستخدم</label>
+                                        <input type="text" class="form-control ml-4" name="username" placeholder="اسم المستخدم" />
+                                    </div>
+                                    <div class="d-flex align-items-start flex-column mt-3">
+                                        <label class="control-label mb-1 text-danger" for="username">كلمة المرور</label>
+                                        <input type="password" class="form-control ml-4" name="password" placeholder="كلمة المرور" />
+                                    </div>
+                                    <div class="w-75 mx-auto d-flex flex-column align-items-center">
+                                        <button class="btn btn-success-dark mt-4 w-100">
+                                            تسجيل دخول
+                                        </button>
+                                        <a href="#" class="forget text-right mt-2 ml-auto text-muted">هل نسيت كلمة
+                                            السر؟</a>
+                                    </div>
+                                    <div class="d-flex flex-row my-4">
+                                        <div class="mx-auto position-relative" style="border-bottom: 1px solid #ccc; width: 90%">
+                                            <span class="position-absolute bg-white" style="top: -12px; left: 49%">او</span>
+                                        </div>
+                                    </div>
+                                    <div class=" w-100 mx-auto d-flex flex-column justify-content-center align-items-center">
+                                        <div class=" d-flex flex-row justify-content-start align-items-center mt-1 w-75 mr-auto">
+                                            <img class="ml-3" style="width: 30px; height: 30px" src="/assets/img/icons/modal-facebook.png" alt="" />
+                                            <a href="#">يمكنك تسجيل الدخول عن طريق فيسبوك</a>
+                                        </div>
+                                        <div class="d-flexflex-rowjustify-content-startalign-items-centermt-1w-75mr-auto">
+                                            <img class="ml-3" style="width: 30px; height: 30px" src="/assets/img/icons/modal-google.png" alt="" />
+                                            <a href="#" class="text-danger">يمكنك تسجيل الدخول عن طريق جوجل</a>
+                                        </div>
+                                        <div class=" d-flex flex-row justify-content-center align-items-center mt-3 w-100">
+                                            <div class="text-right mx-3 text-muted">
+                                                ليس لديك حساب؟
+                                            </div>
+                                            <a href="#" class="text-right text-dark">قم بإنشاء حساب الان</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 d-flex justify-content-center align-items-center" style="border-right: 1px solid #ccc">
+                                <img class="mx-auto" src="/assets/img/modal-logo.png" style="width: 80%; height: 150px" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- XX Login Modal XX -->
+            <!-- Register Modal -->
+            <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered col-9" role="document" style="max-width: 70vw">
+                    <div class="modal-content">
+                        <div class="modal-header" style="border-bottom: none !important; padding: 8px 0">
+                            <h5 class="modal-title" id="registerModalTitle"></h5>
+                            <button type="button" class="close ml-0 mr-auto" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body row pt-0">
+                            <div class="col-8">
+                                <p class="title text-center">انشاء حساب</p>
+                                <div class="d-flex flex-column mt-4">
+                                    <div class="d-flex align-items-start flex-column">
+                                        <label class="control-label mb-1 text-danger text-danger" for="username">اسم
+                                            المستخدم / رقم الهاتف*
+                                        </label>
+                                        <input type="text" required class="form-control ml-4" name="username" placeholder="بريدك الاكتروني او رقم هاتفك المحمول" />
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="d-flex align-items-start flex-column mt-3">
+                                                <label class="control-label mb-1 text-danger text-danger" for="username">كلمة المرور*</label>
+                                                <input type="password" class="form-control ml-4" name="password" placeholder="كلمة المرور" required />
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="d-flex align-items-start flex-column mt-3">
+                                                <label class="control-label mb-1 text-danger" for="username">أعد إدخال
+                                                    كلمة المرور*</label>
+                                                <input type="password" class="form-control ml-4" name="confirm_password" placeholder="أعد إدخال كلمة المرور" required />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="d-flex align-items-start flex-column mt-3">
+                                                <label class="control-label mb-1 text-danger" for="username">رقم
+                                                    الواتساب*</label>
+                                                <input type="text" class="form-control ml-4" name="whatsapp" placeholder="رقم الواتساب" required />
+                                            </div>
+                                        </div>
+                                        <div class="col-6 row">
+                                            <div class=" d-flex align-items-start flex-column mt-3 col-6">
+                                                <label class="control-label mb-1 text-danger" for="username">العمر*</label>
+                                                <input type="number" min="3" max="120" class="form-control ml-4" name="age" placeholder="العمر" required />
+                                            </div>
+                                            <div class=" d-flex align-items-start flex-column mt-3 col-6">
+                                                <label class="control-label mb-1 text-danger" for="username">الجنس*</label>
+                                                <select class="form-control" required name="gender" id="">
+                                                    <option value="male">Male</option>
+                                                    <option value="female">Female</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w-75 mx-auto d-flex flex-column align-items-center">
+                                        <button class="btn btn-success-dark mt-4 w-100">
+                                            إنشاء حساب
+                                        </button>
+                                    </div>
+                                    <div class="d-flex flex-row my-4">
+                                        <div class="mx-auto position-relative" style="border-bottom: 1px solid #ccc; width: 90%">
+                                            <span class="position-absolute bg-white" style="top: -12px; left: 49%">او</span>
+                                        </div>
+                                    </div>
+                                    <div class="w-100 px-4 mx-auto d-flex flex-center flex-wrap">
+                                        <div class=" col-6 d-flex flex-row justify-content-start align-items-center mt-1">
+                                            <img class="ml-3" style="width: 30px; height: 30px" src="/assets/img/icons/modal-facebook.png" alt="" />
+                                            <a href="#">يمكنك الاشتراك عبر فيسبوك</a>
+                                        </div>
+                                        <div class=" col-6 d-flex flex-row justify-content-start align-items-center mt-1">
+                                            <img class="ml-3" style="width: 30px; height: 30px" src="/assets/img/icons/modal-google.png" alt="" />
+                                            <a href="#" class="text-danger">يمكنك الاشتراك عبر جوجل</a>
+                                        </div>
+                                        <div class=" col-12 d-flex flex-row justify-content-center align-items-center mt-3">
+                                            <div class="text-center mx-3 text-muted">
+                                                املك حساب بالفعل
+                                            </div>
+                                            <a href="#" class="text-center text-dark">قم بتسجيل الدخول الان</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 d-flex justify-content-center align-items-center" style="border-right: 1px solid #ccc">
+                                <img class="mx-auto" src="/assets/img/modal-logo.png" style="width: 80%; height: 150px" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- XX Register Modal XX -->
             <!---- XX Page Header XX--->
             <!---------->
             <!-- Main -->
             <!---------->
-            <div class="container-fluid d-flex flex-column justify-content-start position-relative" style="min-height: 100vh;">
+            <div class=" container-fluid d-flex flex-column justify-content-start position-relative" style="min-height: 100vh">
                 <!-- Filter -->
                 <div class="row mt-3 text-right mr-4">
                     <label for="filter" class="label text-lg-center pt-2 col-sm-2" style="min-width: 100px">
-                        كل الحلقات <img class="mx-1" src="/assets/img/icons/filter.png" alt=""></label>
+                        كل الحلقات
+                        <img class="mx-1" src="/assets/img/icons/filter.png" alt="" /></label>
                     <div class="col-lg-6">
-                        <input class="form-control" style="font-size: #ddd;" type="text" placeholder="ابحث عن اسم المحفظ او الحلقة" />
+                        <input class="form-control" style="font-size: #ddd" type="text" placeholder="ابحث عن اسم المحفظ او الحلقة" />
                     </div>
                 </div>
                 <!-- XX Filter XX -->
@@ -76,7 +240,9 @@
                     <div class=" row mt-3 d-flex flex-row flex-wrap justify-content-start align-items-center px-3">
                         <div class="card text-right col-lg-3 shadow ml-auto my-2" style="max-width: 350px">
                             <div class="card-body">
-                                <p class="card-title">الحلقة: السبت /الثلاثاء ... الساعة 3 عصرا</p>
+                                <p class="card-title">
+                                    الحلقة: السبت /الثلاثاء ... الساعة 3 عصرا
+                                </p>
                                 <p class="card-subtitle">الشيخ /علي عبد الجليل .. رجال</p>
                                 <div class=" d-flex flex-row justify-content-between align-items-center mt-3">
                                     <p class="text-success episode-number">مستوى الحلقة (1)</p>
@@ -87,6 +253,7 @@
                     </div>
                 </div>
                 <!-- XX Episodes cards XX -->
+
                 <!---------------->
                 <!-- XX Main XX -->
                 <!---------------->
@@ -95,21 +262,29 @@
                 <!-- Footer -->
                 <!------------>
                 <!---- Page Footer --->
-                <footer class="position-absolute row mx-0 text-white justify-content-between text-center py-2 w-100 container-with-bg" style="bottom: 0;left: 0;">
+                <footer class=" position-absolute row mx-0 text-white justify-content-between text-center py-2 w-100 container-with-bg" style="bottom: 0; left: 0">
                     <span class="col-lg-2"></span>
                     <div class=" col-lg-7 d-flex flex-column justify-content-center align-items-center my-3">
-                        <p class="title " style="font-size: 14px;">حلقات تحفيظ القرآن مجانالكُتاب هو موقع إلكتروني خاص بتحفيظ القرآن الكريم على يد نخبة من الأساتذة الأفاضل</p>
-                        <p class="subtitle mt-2" style="font-family: GESSLight">جميع الحقوق محفوظة بتاريخ 2021</p>
+                        <p class="title" style="font-size: 14px">
+                            حلقات تحفيظ القرآن مجانالكُتاب هو موقع إلكتروني خاص بتحفيظ القرآن الكريم على يد نخبة من الأساتذة الأفاضل
+                        </p>
+                        <p class="subtitle mt-2" style="font-family: GESSLight">
+                            جميع الحقوق محفوظة بتاريخ 2021
+                        </p>
                     </div>
                     <div class=" col-lg-3 d-flex flex-column justify-content-center align-items-center my-3">
-                        <p class="title" style="font-size:16px;">للاقتراحات و التواصل معنا اضغط هنا</p>
-                        <div class="d-flex flex-row justify-content-center align-items-center">
-                            <p class="subtitle-small mt-2" style="font-size: 14px;font-family: GESSLight">تابعنا هنا</p>
+                        <p class="title" style="font-size: 16px">
+                            للاقتراحات و التواصل معنا اضغط هنا
+                        </p>
+                        <div class=" d-flex flex-row justify-content-center align-items-center">
+                            <p class="subtitle-small mt-2" style="font-size: 14px; font-family: GESSLight">
+                                تابعنا هنا
+                            </p>
                             <a href="#">
-                                <img style="width: 16px;" class="ml-1 mr-3 mt-1" src="/assets/img/icons/facebook.png" alt="">
+                                <img style="width: 16px" class="ml-1 mr-3 mt-1" src="/assets/img/icons/facebook.png" alt="" />
                             </a>
                             <a href="#">
-                                <img style="width: 16px;" class="mx-1 mt-1" src="/assets/img/icons/instagram.png" alt="">
+                                <img style="width: 16px" class="mx-1 mt-1" src="/assets/img/icons/instagram.png" alt="" />
                             </a>
                         </div>
                     </div>
